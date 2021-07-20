@@ -1,4 +1,4 @@
-package mirobackup;
+package am.james.mirobackup;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-
 import static java.lang.Integer.valueOf;
 
 public class MiroBackup {
@@ -112,8 +111,7 @@ public class MiroBackup {
       System.setProperty("webdriver.chrome.driver", appProps.getProperty("ChromeDriverLocation"));
 
     } catch (IOException Ex) {
-      System.out.println(
-        "Unable to find configuration file \"Miro.properties\". The file has been created for you.");
+      System.out.println("Unable to find configuration file \"Miro.properties\". The file has been created for you.");
       createProperties();
     }
 
